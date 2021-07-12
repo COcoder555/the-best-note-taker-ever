@@ -2,13 +2,7 @@ const router = require("express").Router();
 const db = require("../db/db.json");
 const fs = require("fs");
 const { v4: uuidv4 } = require('uuid');
-// const filter = require("express").Filter();
 
-// const load = ()=>{
-//     router.get('/api/notes',(req,res)=>{
-//         for(let i = 0; i < )
-//     })
-// }
 router.get('/notes', (req, res) => {
     let database = fs.readFileSync('db/db.json');
     database = JSON.parse(database);
@@ -38,4 +32,4 @@ res.json(filteredNotes)
 });
     
     
-module.exports = router
+module.exports = router;
